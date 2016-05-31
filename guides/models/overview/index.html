@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Hanami - The web, with simplicity" />
+<meta name="keywords" content="hanami,hanamirb,lotus,lotusrb,web,framework,ruby,open source,oss,os,software,free,free software,architecture,fast,lightweight,testing,tdd,bdd,test driven development,behaviour driven development,full stack,mvc,model view object,pattern,patterns,design patterns,oop,object oriented programming,testability,http,https,routing,router,http router,restful,resource,resources,convention,controller,models,repository,query,sql,interactors,two-step view,view,template,presenters,render,rendering,helpers,erb,haml,tilt,json,xml,yaml,yml,framwork,framewrok,riby,free sowftare"/>
+<meta name="author" content="Luca Guidi">
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<link href="/atom.xml" rel="alternate" title="Hanami" type="application/atom+xml" />
+
+<title>Hanami | Guides - Models Overview</title>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+<link href="/stylesheets/toolkit-minimal.css" rel="stylesheet" />
+<link href="/stylesheets/application-minimal.css" rel="stylesheet" />
+
+    <link href="/stylesheets/guides.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-static-top navbar-padded text-uppercase app-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed p-x-0" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <span>Hanami</span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/guides">Guides</a>
+        </li>
+        <li>
+          <a href="/community">Community</a>
+        </li>
+        <li>
+          <a href="/donate">Donate</a>
+        </li>
+        <li>
+          <a href="https://github.com/hanami" target="_blank">Source Code</a>
+        </li>
+        <li>
+          <a href="/blog">Blog</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+    <div class="container docs-content">
+      <ul id="markdown-toc">
+        <li></li>
+        <li><a href="https://github.com/hanami/hanami.github.io/edit/build/source/guides/models/overview.md" target="_blank"><span class="icon icon-pencil" id="edit-guides-article" title="Edit this article"></span></a></li>
+
+          <li class="toc-group">
+            <span>Introduction</span>
+            <ul>
+                <li>
+                  <a href="/guides/getting-started">Getting Started</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Architectures</span>
+            <ul>
+                <li>
+                  <a href="/guides/architectures/overview">Overview</a>
+                </li>
+                <li>
+                  <a href="/guides/architectures/container">Container</a>
+                </li>
+                <li>
+                  <a href="/guides/architectures/application">Application</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Applications</span>
+            <ul>
+                <li>
+                  <a href="/guides/applications/initializers">Initializers</a>
+                </li>
+                <li>
+                  <a href="/guides/applications/rake">Rake</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Routing</span>
+            <ul>
+                <li>
+                  <a href="/guides/routing/overview">Overview</a>
+                </li>
+                <li>
+                  <a href="/guides/routing/basic-usage">Basic Usage</a>
+                </li>
+                <li>
+                  <a href="/guides/routing/restful-resources">RESTful Resource(s)</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Actions</span>
+            <ul>
+                <li>
+                  <a href="/guides/actions/overview">Overview</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/basic-usage">Basic Usage</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/parameters">Parameters</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/request-and-response">Request & Response</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/exposures">Exposures</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/rack-integration">Rack Integration</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/mime-types">MIME Types</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/cookies">Cookies</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/sessions">Sessions</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/exception-handling">Exception Handling</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/control-flow">Control Flow</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/http-caching">HTTP Caching</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/share-code">Share Code</a>
+                </li>
+                <li>
+                  <a href="/guides/actions/testing">Testing</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Views</span>
+            <ul>
+                <li>
+                  <a href="/guides/views/overview">Overview</a>
+                </li>
+                <li>
+                  <a href="/guides/views/basic-usage">Basic Usage</a>
+                </li>
+                <li>
+                  <a href="/guides/views/templates">Templates</a>
+                </li>
+                <li>
+                  <a href="/guides/views/mime-types">MIME Types</a>
+                </li>
+                <li>
+                  <a href="/guides/views/layouts">Layouts</a>
+                </li>
+                <li>
+                  <a href="/guides/views/custom-error-pages">Custom Error Pages</a>
+                </li>
+                <li>
+                  <a href="/guides/views/share-code">Share Code</a>
+                </li>
+                <li>
+                  <a href="/guides/views/testing">Testing</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Models</span>
+            <ul>
+                <li>
+                  <a href="/guides/models/overview">Overview</a>
+                </li>
+                <li>
+                  <a href="/guides/models/entities">Entities</a>
+                </li>
+                <li>
+                  <a href="/guides/models/repositories">Repositories</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Migrations</span>
+            <ul>
+                <li>
+                  <a href="/guides/migrations/overview">Overview</a>
+                </li>
+                <li>
+                  <a href="/guides/migrations/create-table">Create Table</a>
+                </li>
+                <li>
+                  <a href="/guides/migrations/alter-table">Alter Table</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Helpers</span>
+            <ul>
+                <li>
+                  <a href="/guides/helpers/overview">Overview</a>
+                </li>
+                <li>
+                  <a href="/guides/helpers/html5">HTML5</a>
+                </li>
+                <li>
+                  <a href="/guides/helpers/forms">Forms</a>
+                </li>
+                <li>
+                  <a href="/guides/helpers/routing">Routing</a>
+                </li>
+                <li>
+                  <a href="/guides/helpers/assets">Assets</a>
+                </li>
+                <li>
+                  <a href="/guides/helpers/links">Links</a>
+                </li>
+                <li>
+                  <a href="/guides/helpers/escape">Markup Escape</a>
+                </li>
+                <li>
+                  <a href="/guides/helpers/numbers">Numbers</a>
+                </li>
+                <li>
+                  <a href="/guides/helpers/custom-helpers">Custom Helpers</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Mailers</span>
+            <ul>
+                <li>
+                  <a href="/guides/mailers/overview">Overview</a>
+                </li>
+                <li>
+                  <a href="/guides/mailers/basic-usage">Basic Usage</a>
+                </li>
+                <li>
+                  <a href="/guides/mailers/templates">Templates</a>
+                </li>
+                <li>
+                  <a href="/guides/mailers/delivery">Delivery</a>
+                </li>
+                <li>
+                  <a href="/guides/mailers/share-code">Share Code</a>
+                </li>
+                <li>
+                  <a href="/guides/mailers/testing">Testing</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Assets</span>
+            <ul>
+                <li>
+                  <a href="/guides/assets/overview">Overview</a>
+                </li>
+                <li>
+                  <a href="/guides/assets/preprocessors">Preprocessors</a>
+                </li>
+                <li>
+                  <a href="/guides/assets/compressors">Compressors</a>
+                </li>
+                <li>
+                  <a href="/guides/assets/content-delivery-network">Content Delivery Network (CDN)</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Command Line</span>
+            <ul>
+                <li>
+                  <a href="/guides/command-line/applications">Applications</a>
+                </li>
+                <li>
+                  <a href="/guides/command-line/generators">Generators</a>
+                </li>
+                <li>
+                  <a href="/guides/command-line/destroy">Destroy</a>
+                </li>
+                <li>
+                  <a href="/guides/command-line/database">Database</a>
+                </li>
+                <li>
+                  <a href="/guides/command-line/assets">Assets</a>
+                </li>
+                <li>
+                  <a href="/guides/command-line/routes">Routes</a>
+                </li>
+                <li>
+                  <a href="/guides/command-line/version">Version</a>
+                </li>
+            </ul>
+          </li>
+          <li class="toc-group">
+            <span>Upgrade Notes</span>
+            <ul>
+                <li>
+                  <a href="/guides/upgrade-notes/v060">v0.6.0</a>
+                </li>
+                <li>
+                  <a href="/guides/upgrade-notes/v070">v0.7.0</a>
+                </li>
+            </ul>
+          </li>
+      </ul>
+
+      
+      <h1 id="models" class="title"><a name="models" class="anchor" href="#models">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Models</h1>
+    
+<p>Hanami&#39;s model domain is implemented in a way that separates the behavior that we want to express (entities) from that persistence layer (repositories and database).
+This design helps to keep the interface of our objects really small and, by consequence, fast and reusable.</p>
+
+      <h2 id="soft-dependency" class="title"><a name="soft-dependency" class="anchor" href="#soft-dependency">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Soft Dependency</h2>
+    
+<p>If we look at the <code>Gemfile</code> of our generated application, <code>hanami-model</code> gem is a separated entry.
+That means our applications don&#39;t depend on this framework.</p>
+
+<p><strong>We are free to bring our own ORM and/or persistency library.</strong></p>
+
+      <h2 id="adapters" class="title"><a name="adapters" class="anchor" href="#adapters">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Adapters</h2>
+    
+<p><code>Hanami::Model</code> is designed to expose high level operations to perform against a database.
+This allows to swap the storage, without affecting the code of our application.</p>
+
+<p>For this purpose the framework has a concept of <em>adapter</em>.
+It&#39;s layer of code that targets a specific data store and exposes a common set of operations.</p>
+
+<p>While we&#39;ll <strong>NEVER</strong> work with them directly, it&#39;s important to know that Hanami ships with three types of adapters:</p>
+
+<ul>
+<li>File System (default)</li>
+<li>Memory</li>
+<li>SQL</li>
+</ul>
+
+<p>File System is the default adapter, because it&#39;s a schema-less storage for quick prototyping.
+It helps us to focus on behavior without worrying about database migrations before starting to code our feature.</p>
+
+<p>We can use <code>--database</code> command line argument to specify the adapter that we want to use for newly created applications.</p>
+
+<p>It generates some code in <code>lib/bookshelf.rb</code> that sets the current adapter (<code>:sql</code>) and shows examples for the available choices.</p>
+<pre class="language-ruby ruby"><code><span class="c1"># lib/bookshelf.rb</span>
+<span class="c1"># ...</span>
+<span class="no">Hanami</span><span class="o">::</span><span class="no">Model</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span>
+  <span class="c1">##</span>
+  <span class="c1"># Database adapter</span>
+  <span class="c1">#</span>
+  <span class="c1"># Available choices:</span>
+  <span class="c1">#</span>
+  <span class="c1">#  * File System adapter</span>
+  <span class="c1">#    adapter type: :file_system, uri: 'file:///db/bookshelf_development'</span>
+  <span class="c1">#</span>
+  <span class="c1">#  * Memory adapter</span>
+  <span class="c1">#    adapter type: :memory, uri: 'memory://localhost/bookshelf_development'</span>
+  <span class="c1">#</span>
+  <span class="c1">#  * SQL adapter</span>
+  <span class="c1">#    adapter type: :sql, uri: 'sqlite://db/bookshelf_development.sqlite3'</span>
+  <span class="c1">#    adapter type: :sql, uri: 'postgres://localhost/bookshelf_development'</span>
+  <span class="c1">#    adapter type: :sql, uri: 'mysql://localhost/bookshelf_development'</span>
+  <span class="c1">#</span>
+  <span class="n">adapter</span> <span class="ss">type: :sql</span><span class="p">,</span> <span class="ss">uri: </span><span class="no">ENV</span><span class="p">[</span><span class="s1">'BOOKSHELF_DATABASE_URL'</span><span class="p">]</span>
+
+  <span class="c1"># ...</span>
+<span class="k">end</span><span class="p">.</span><span class="nf">load!</span>
+</code></pre>
+
+      <h2 id="mapping" class="title"><a name="mapping" class="anchor" href="#mapping">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Mapping</h2>
+    
+<p>The partitioning between our application&#39;s domain and databases is resolved by using a data mapper.
+We use it to describe how each entity must be persisted.</p>
+
+<p>This can be inconvenient at the beginning, when we deal with a few entities and attributes, but as our codebase grows, we are in <strong>total control</strong> of how our code interacts with a database.</p>
+
+<p>Another strong point in favor of this choice is that <strong>we can persist nearly any Ruby object, even if it wasn&#39;t designed to do so</strong>.</p>
+
+<p>Our application comes with a default mapper in <code>lib/bookshelf.rb</code>, we can use it to specify our persistence preferences.</p>
+<pre class="language-ruby ruby"><code><span class="c1"># ...</span>
+
+<span class="no">Hanami</span><span class="o">::</span><span class="no">Model</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span>
+  <span class="c1"># ...</span>
+  <span class="n">mapping</span> <span class="k">do</span>
+    <span class="n">collection</span> <span class="ss">:books</span> <span class="k">do</span>
+      <span class="n">entity</span>     <span class="no">Book</span>
+      <span class="n">repository</span> <span class="no">BookRepository</span>
+
+      <span class="n">attribute</span> <span class="ss">:id</span><span class="p">,</span>    <span class="no">Integer</span>
+      <span class="n">attribute</span> <span class="ss">:title</span><span class="p">,</span> <span class="no">String</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span><span class="p">.</span><span class="nf">load!</span>
+</code></pre>
+
+<p>The first thing we should look at is <code>#collection</code>.
+It&#39;s the unique name of a set of coherent records or documents.
+For instance, if used with SQL adapter, it&#39;s the name of the database table.</p>
+
+<p>It accepts a block that allows us to associate an <a href="/guides/models/entities">entity</a> and a <a href="/guides/models/repositories">repository</a> with it.</p>
+
+<p>Then we list all the attributes from the <code>Book</code> entity that we want to persist and their Ruby type.</p>
+
+      <h3 id="entity-vs-database-mismatching" class="title"><a name="entity-vs-database-mismatching" class="anchor" href="#entity-vs-database-mismatching">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Entity vs Database Mismatching</h3>
+    
+<p>Imagine we&#39;re building a Ruby library for Twitter, and we have a <code>Tweet</code> object that we want to save in our database.</p>
+<pre class="language-ruby ruby"><code><span class="k">class</span> <span class="nc">Tweet</span>
+  <span class="kp">attr_accessor</span> <span class="ss">:id</span><span class="p">,</span> <span class="ss">:user_id</span><span class="p">,</span> <span class="ss">:text</span><span class="p">,</span> <span class="ss">:favorite_count</span><span class="p">,</span> <span class="ss">:retweet_count</span><span class="p">,</span>
+    <span class="ss">:lat</span><span class="p">,</span> <span class="ss">:lng</span><span class="p">,</span> <span class="ss">:reply</span><span class="p">,</span> <span class="ss">:retweet</span><span class="p">,</span> <span class="ss">:quoted</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">attributes</span> <span class="o">=</span> <span class="p">{})</span>
+    <span class="c1"># ...</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>It comes with a lot of data, but we&#39;re only interested to persist a subset of it (the first line defined by <code>attr_accessor</code>).</p>
+<pre class="language-ruby ruby"><code><span class="n">collection</span> <span class="ss">:tweets</span> <span class="k">do</span>
+  <span class="n">entity</span>     <span class="no">Tweet</span>
+  <span class="n">repository</span> <span class="no">TweetRepository</span>
+
+  <span class="n">attribute</span> <span class="ss">:id</span><span class="p">,</span>             <span class="no">Integer</span>
+  <span class="n">attribute</span> <span class="ss">:user_id</span><span class="p">,</span>        <span class="no">Integer</span>
+  <span class="n">attribute</span> <span class="ss">:text</span><span class="p">,</span>           <span class="no">String</span>
+  <span class="n">attribute</span> <span class="ss">:favorite_count</span><span class="p">,</span> <span class="no">Integer</span>
+  <span class="n">attribute</span> <span class="ss">:retweet_count</span><span class="p">,</span>  <span class="no">Integer</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>All the other attributes are just ignored by our repository.</p>
+
+      <h3 id="legacy-databases" class="title"><a name="legacy-databases" class="anchor" href="#legacy-databases">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Legacy Databases</h3>
+    
+<p>Until now we&#39;ve worked with the assumption of working with a new database, grown alongside with production code.
+If this isn&#39;t the case for us, we can use <em>data mapper</em> do resolve this mismatch.</p>
+<pre class="language-ruby sql"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">book_catalog</span> <span class="p">(</span>
+    <span class="n">_id</span> <span class="n">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">s_title</span> <span class="n">text</span>
+<span class="p">);</span>
+</code></pre>
+
+<p>Imagine we have the above Postgres table from our legacy database and we want to map it to our <code>Book</code> entity.</p>
+<pre class="language-ruby ruby"><code><span class="n">collection</span> <span class="ss">:book_catalog</span> <span class="k">do</span>
+  <span class="n">entity</span>     <span class="no">Book</span>
+  <span class="n">repository</span> <span class="no">BookRepository</span>
+
+  <span class="n">identity</span> <span class="ss">:_id</span>
+
+  <span class="n">attribute</span> <span class="ss">:id</span><span class="p">,</span>    <span class="no">Integer</span><span class="p">,</span> <span class="ss">as: :_id</span>
+  <span class="n">attribute</span> <span class="ss">:title</span><span class="p">,</span> <span class="no">String</span><span class="p">,</span>  <span class="ss">as: :s_title</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>The first thing that we notice is the correspondence between <code>#collection</code> name and the database table name.</p>
+
+<p>Then the argument that we pass to <code>#attribute</code> is the name of the attribute from <code>Book</code>.
+If the database column name has the same attribute name we&#39;re done.
+In our case we need to use <code>:as</code> option, to indicate the database column that we want to map.</p>
+
+<p>Hanami collections assume the primary key for a table is the <code>id</code> column, but this example uses <code>_id</code> instead. We can
+change the primary key for a collection by using the <code>identity</code> setting which takes a single column name.</p>
+
+      <h3 id="custom-coercions" class="title"><a name="custom-coercions" class="anchor" href="#custom-coercions">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Custom Coercions</h3>
+    
+<p>Hanami data mapper supports the most common Ruby data type such as <code>String</code>, <code>Integer</code>, or <code>DateTime</code>.
+Sometimes, this simple approach is not enough to solve the database impedance mismatch on types.</p>
+
+<p>Imagine we have a <code>Book#tags</code>, a collection of strings that we want to store as a <a href="http://www.postgresql.org/docs/9.1/static/arrays.html">Postgres array</a>.
+If we use <code>Array</code> builtin type, our tags aren&#39;t properly translated into a format that is compatible with our column type.</p>
+
+<p>The solution to this problem is to define a custom coercer.</p>
+<pre class="language-ruby ruby"><code><span class="c1"># lib/ext/pg_array.rb</span>
+<span class="nb">require</span> <span class="s1">'hanami/model/coercer'</span>
+<span class="nb">require</span> <span class="s1">'sequel'</span>
+<span class="nb">require</span> <span class="s1">'sequel/extensions/pg_array'</span>
+
+<span class="k">class</span> <span class="nc">PGArray</span> <span class="o">&lt;</span> <span class="no">Hanami</span><span class="o">::</span><span class="no">Model</span><span class="o">::</span><span class="no">Coercer</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">dump</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="o">::</span><span class="no">Sequel</span><span class="p">.</span><span class="nf">pg_array</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="ss">:varchar</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">load</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="o">::</span><span class="no">Kernel</span><span class="o">.</span><span class="no">Array</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">unless</span> <span class="n">value</span><span class="p">.</span><span class="nf">nil?</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+<pre class="language-ruby ruby"><code><span class="c1"># lib/bookshelf.rb</span>
+<span class="nb">require_relative</span> <span class="s1">'./ext/pg_array'</span>
+<span class="c1"># ...</span>
+
+<span class="no">Hanami</span><span class="o">::</span><span class="no">Model</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span>
+  <span class="c1"># ...</span>
+  <span class="n">mapping</span> <span class="k">do</span>
+    <span class="c1"># ...</span>
+    <span class="n">collection</span> <span class="ss">:articles</span> <span class="k">do</span>
+      <span class="n">attribute</span> <span class="ss">:id</span><span class="p">,</span>   <span class="no">Integer</span>
+      <span class="n">attribute</span> <span class="ss">:tags</span><span class="p">,</span> <span class="no">PGArray</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span><span class="p">.</span><span class="nf">load!</span>
+</code></pre>
+
+<p class="warning">
+  A custom coercer **MUST** respond to <code>.dump(value)</code> for serialization and to <code>.load(value)</code> for deserialization.
+</p>
+
+      <h3 id="use-uuid-as-primary-key-instead-of-integer" class="title"><a name="use-uuid-as-primary-key-instead-of-integer" class="anchor" href="#use-uuid-as-primary-key-instead-of-integer">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Use UUID as primary key instead of integer</h3>
+    
+<p>When using Postgres, you may use <a href="http://www.postgresql.org/docs/8.3/static/datatype-uuid.html">UUID Type</a> as primary keys instead of integers.
+First of all, you need to enable <code>uuid-ossp</code> extension:</p>
+<pre class="language-ruby ruby"><code><span class="c1"># db/migrations/20160125223305_enable_uuid_extensions.rb</span>
+<span class="no">Hanami</span><span class="o">::</span><span class="no">Model</span><span class="p">.</span><span class="nf">migration</span> <span class="k">do</span>
+  <span class="n">change</span> <span class="k">do</span>
+    <span class="n">run</span> <span class="s1">'CREATE EXTENSION IF NOT EXISTS "uuid-ossp"'</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>Then, create table with <code>uuid</code> type and set default value:</p>
+<pre class="language-ruby ruby"><code><span class="c1"># db/migrations/20160126223305_create_books.rb</span>
+<span class="no">Hanami</span><span class="o">::</span><span class="no">Model</span><span class="p">.</span><span class="nf">migration</span> <span class="k">do</span>
+  <span class="n">create_table</span> <span class="ss">:books</span> <span class="k">do</span>
+    <span class="n">primary_key</span> <span class="ss">:id</span><span class="p">,</span> <span class="ss">:uuid</span><span class="p">,</span> <span class="ss">default: </span><span class="no">Sequel</span><span class="p">.</span><span class="nf">function</span><span class="p">(</span><span class="ss">:uuid_generate_v4</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+
+      <hr>
+
+      <div class="pull-left">Prev: <a href="/guides/views/testing">Views - Testing</a></div><div class="pull-right">Next: <a href="/guides/models/entities">Models - Entities</a></div>
+    </div>
+
+    <div id="lotus" class="text-xs-center">
+  <div class="container">
+    <div class="row">
+      Looking for <strong>Lotus</strong>? We renamed the project and it's now called <strong>Hanami</strong>. Read the <a href="/blog/2016/01/22/lotus-is-now-hanami.html">announcement</a>.
+    </div>
+  </div>
+</div>
+
+
+<div class="block app-block-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2 m-b">
+        <ul class="list-unstyled list-spaced">
+          <li><h6 class="text-uppercase">Project</h6></li>
+          <li><a href="https://github.com/hanami" target="_blank">GitHub</a></li>
+          <li><a href="https://twitter.com/hanamirb" target="_blank">Twitter</a></li>
+          <li><a href="https://rubygems.org/gems/hanami" target="_blank">Rubygems</a></li>
+          <li><a href="/status" target="_blank">Gems Status</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2 m-b">
+        <ul class="list-unstyled list-spaced">
+          <li><h6 class="text-uppercase">Community</h6></li>
+          <li><a href="/community#code-of-conduct">Code of Conduct</a></li>
+          <li><a href="http://chat.hanamirb.org" target="_blank">Chat</a></li>
+          <li><a href="https://discuss.hanamirb.org" target="_blank">Forum</a></li>
+          <li><a href="https://stackoverflow.com/questions/tagged/hanami" target="_blank">StackOverflow</a></li>
+          <li><a href="/mailing-list">Mailing List</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2 m-b">
+        <ul class="list-unstyled list-spaced">
+          <a href="http://dnsimple.link/resolving-hanami" target="_blank">
+            <span>Resolving with<br/></span>
+            <img src="https://cdn.dnsimple.com/assets/resolving-with-us/logo-dark.png" alt="DNSimple" style="display:block;margin:0;padding:0;width:100px;"/>
+          </a>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        <h6 class="text-uppercase">About</h6>
+        <p>
+          Hanami is a web framework for Ruby &mdash; &copy; 2014-2016 <a href="http://lucaguidi.com" target="_blank">Luca Guidi</a>.<br>
+          Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
+          <br><br>
+          This project was formerly known as <strong>Lotus</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/javascripts/jquery.min.js" type="text/javascript"></script>
+<script src="/javascripts/toolkit.js" type="text/javascript"></script>
+<script src="/javascripts/application.js" type="text/javascript"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47369640-1', 'hanamirb.org');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

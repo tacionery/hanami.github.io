@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+   <title>Hanami</title>
+   <subtitle>Hanami web framework blog</subtitle>
+   <link href="http://hanamirb.org/atom.xml" rel="self"/>
+   <link href="http://hanamirb.org/blog"/>
+   <updated>2016-05-23T07:43:00+00:00</updated>
+   <id>http://hanamirb.org/blog</id>
+   <author>
+     <name>Hanami</name>
+     <email>admin@hanamirb.org</email>
+   </author>
+
+     <entry>
+       <title>Announcing Hanami v0.7.3</title>
+       <id>http://hanamirb.org/blog/2016/05/23/announcing-hanami-073.html</id>
+       <link rel="alternate" href="http://hanamirb.org/blog/2016/05/23/announcing-hanami-073.html"/>
+       <updated>2016-05-23T07:43:00+00:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Faster static assets in development
+
+       </summary>
+       <content type="html"><![CDATA[<p>This release introduces faster static assets in development.</p>
+
+      <h2 id="bug-fixes" class="title"><a name="bug-fixes" class="anchor" href="#bug-fixes">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Bug Fixes</h2>
+    
+      <h3 id="hanami-a-href-https-github-com-hanami-hanami-blob-0-7-x-changelog-md-v073-2016-05-23-v0-7-3-a-" class="title"><a name="hanami-a-href-https-github-com-hanami-hanami-blob-0-7-x-changelog-md-v073-2016-05-23-v0-7-3-a-" class="anchor" href="#hanami-a-href-https-github-com-hanami-hanami-blob-0-7-x-changelog-md-v073-2016-05-23-v0-7-3-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>hanami <a href="https://github.com/hanami/hanami/blob/0.7.x/CHANGELOG.md#v073---2016-05-23">v0.7.3</a></h3>
+    
+<ul>
+<li>Use <code>Shotgun::Static</code> to serve static files in development mode and avoid to reload the env <a href="https://github.com/pascalbetz">Pascal Betz</a></li>
+</ul>
+
+      <h2 id="upgrade-instructions" class="title"><a name="upgrade-instructions" class="anchor" href="#upgrade-instructions">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Upgrade Instructions</h2>
+    
+<p>Please edit the <code>Gemfile</code> of your project, change Hanami version into <code>0.7.3</code> and then run <code>bundle update hanami</code>.</p>
+]]></content>
+     </entry>
+     <entry>
+       <title>Validations Predicates</title>
+       <id>http://hanamirb.org/blog/2016/05/16/validations-predicates.html</id>
+       <link rel="alternate" href="http://hanamirb.org/blog/2016/05/16/validations-predicates.html"/>
+       <updated>2016-05-16T07:37:00+00:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Hanami will introduce a new syntax for validations based on predicates. It features builtin and custom predicates, type safety, specific coercions for HTTP params, whitelisting, custom error messages with optional i18n support. This release will start a new alliance between Hanami and dry-rb.
+
+       </summary>
+       <content type="html"><![CDATA[<p>For long time <a href="https://github.com/hanami/validations">Hanami::Validations</a> had problems that we struggled to solve and new features were problematic to add.
+Data management is complex task with thousands of cases to cover and because validations deal untrusted input, edge cases are common.
+Even simple cases like <em>blank values</em> management became an issue.</p>
+
+<p>We tried to fix these problems, but over the time we realized that we hit the limit of that syntax, which led to lack of flexibility for us and for developers themselves.</p>
+
+<p>At the same time <a href="http://dry-rb.org">dry-rb</a> folks released a new, stronger validations gem: <code>dry-validation</code>.
+It changes, for the good, the way we express validation rules.
+So we took the decision to radically change our syntax and to adopt <code>dry-validation</code> as a validations backend for us.</p>
+
+      <h2 id="how-it-will-work-" class="title"><a name="how-it-will-work-" class="anchor" href="#how-it-will-work-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>How It Will Work?</h2>
+    
+<p><code>Hanami::Validations</code> will work with input hashes and let define a set of validation rules <strong>for each</strong> key/value pair.
+These rules are wrapped by lambdas (or special DSL) that check the input for a specific key to determine if it&#39;s valid or not.
+To do that, we translate business requirements into predicates that are chained together with Ruby <em>faux boolean logic</em> operators (eg. <code>&amp;</code> or <code>|</code>).</p>
+
+<p>Think of a signup form.
+We need to ensure data integrity for the  <code>name</code> field with the following rules.
+It is required, it has to be: filled <strong>and</strong> a string <strong>and</strong> its size must be greater than 3 chars, but lesser than 64.
+Here’s the code, <strong>read it aloud</strong> and notice how it perfectly expresses our needs for <code>name</code>.</p>
+<pre class="language-ruby ruby"><code><span class="k">class</span> <span class="nc">Signup</span>
+  <span class="kp">include</span> <span class="no">Hanami</span><span class="o">::</span><span class="no">Validations</span>
+
+  <span class="n">validations</span> <span class="k">do</span>
+    <span class="n">required</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span> <span class="p">{</span> <span class="n">filled?</span> <span class="o">&amp;</span> <span class="n">str?</span> <span class="o">&amp;</span> <span class="n">size?</span><span class="p">(</span><span class="mi">3</span><span class="p">.</span><span class="nf">.</span><span class="mi">64</span><span class="p">)</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="no">Signup</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"Luca"</span><span class="p">).</span><span class="nf">validate</span>
+<span class="n">result</span><span class="p">.</span><span class="nf">success?</span> <span class="c1"># =&gt; true</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="no">Signup</span><span class="p">.</span><span class="nf">new</span><span class="p">({}).</span><span class="nf">validate</span>
+
+<span class="n">result</span><span class="p">.</span><span class="nf">success?</span> <span class="c1"># =&gt; false</span>
+<span class="n">result</span><span class="p">.</span><span class="nf">messages</span><span class="p">.</span><span class="nf">fetch</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span> <span class="c1"># =&gt; ["must be filled"]</span>
+</code></pre>
+
+      <h3 id="boolean-logic" class="title"><a name="boolean-logic" class="anchor" href="#boolean-logic">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Boolean Logic</h3>
+    
+<p>When we check data, we expect only two outcomes: an input can be valid or not.
+No grey areas, nor fuzzy results.
+It’s white or black, 1 or 0, <code>true</code> or <code>false</code> and <em>boolean logic</em> is the perfect tool to express these two states.
+Indeed, a Ruby <em>boolean expression</em> can only return <code>true</code> or <code>false</code>.</p>
+
+<p>To better recognise the pattern, let’s get back to the example above.
+This time we will map the natural language rules with programming language rules.</p>
+<pre class="language-ruby ruby"><code>        <span class="no">A</span> <span class="nb">name</span> <span class="n">must</span> <span class="n">be</span> <span class="n">filled</span>  <span class="n">and</span> <span class="n">be</span> <span class="n">a</span> <span class="n">string</span> <span class="n">and</span> <span class="n">its</span> <span class="n">size</span> <span class="n">fall</span> <span class="n">between</span> <span class="mi">3</span> <span class="n">and</span> <span class="mi">64</span><span class="o">.</span>
+           <span class="err">👇</span>            <span class="err">👇</span>     <span class="err">👇</span>        <span class="err">👇</span>    <span class="err">👇</span>       <span class="err">👇</span>                <span class="err">👇</span>    <span class="err">👇</span>
+<span class="n">required</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span>      <span class="p">{</span> <span class="n">filled?</span>  <span class="o">&amp;</span>       <span class="n">str?</span>   <span class="o">&amp;</span>      <span class="n">size?</span>              <span class="p">(</span><span class="mi">3</span> <span class="p">.</span><span class="nf">.</span> <span class="mi">64</span><span class="p">)</span> <span class="p">}</span>
+</code></pre>
+
+<p>Now, I hope you’ll never format code like that, but in this case, that formatting serves well our purpose to show how Ruby’s  simplicity helps to define complex rules with no effort.</p>
+
+<p>From a high level perspective, we can tell that input data for <code>name</code> is <em>valid</em> only if <strong>all</strong> the requirements are satisfied. That’s because we used <code>&amp;</code>.</p>
+
+<p>But there is more. Rule composition with blocks is powerful, but it can become verbose.
+To <strong>reduce verbosity</strong>, Hanami offers convenient macros that are internally expanded (aka interpreted) to an equivalent block expression.</p>
+<pre class="language-ruby ruby"><code><span class="n">required</span><span class="p">(</span><span class="ss">:name</span><span class="p">).</span><span class="nf">filled</span><span class="p">(</span><span class="ss">:str?</span><span class="p">,</span> <span class="n">size?</span><span class="p">:</span> <span class="mi">3</span><span class="p">.</span><span class="nf">.</span><span class="mi">64</span><span class="p">)</span>
+</code></pre>
+
+      <h3 id="the-advantages" class="title"><a name="the-advantages" class="anchor" href="#the-advantages">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>The Advantages</h3>
+    
+<p>With this new syntax we give more control to developers: they can decide the order of execution of the validations.
+They can define <a href="https://github.com/hanami/validations#custom-predicates">custom predicates</a> and <a href="https://github.com/hanami/validations#messages">custom error messages</a>, <a href="https://github.com/hanami/validations#internationalization-i18n">opt in for internationalization (i18n)</a> with small effort.
+They can <a href="https://github.com/hanami/validations#macros">dry code via macros</a>, <a href="https://github.com/hanami/validations#composition">reuse validators</a>, <a href="https://github.com/hanami/validations#type-safety">enforce types</a>, <a href="https://github.com/hanami/validations#whitelisting">whitelist params</a>.</p>
+
+<p>To summarize: we fixed old bugs, implemented features that developers asked for, increased internal code robustness and started a new alliance with <strong>dry-rb</strong> &lt;3.</p>
+
+<p><strong>These chances were just merged in <a href="https://github.com/hanami/validations">master</a> and they will be released in a few months with <code>hanami</code> <code>v0.8.0</code>.</strong></p>
+]]></content>
+     </entry>
+     <entry>
+       <title>Announcing Hanami v0.7.2</title>
+       <id>http://hanamirb.org/blog/2016/02/09/announcing-hanami-072.html</id>
+       <link rel="alternate" href="http://hanamirb.org/blog/2016/02/09/announcing-hanami-072.html"/>
+       <updated>2016-02-09T11:46:00+00:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Fix for static assets middleware
+
+       </summary>
+       <content type="html"><![CDATA[<p>This release fixes only one regression introduced by <a href="/blog/2016/02/05/announcing-hanami-071.html">v0.7.1</a>.</p>
+
+      <h2 id="bug-fixes" class="title"><a name="bug-fixes" class="anchor" href="#bug-fixes">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Bug Fixes</h2>
+    
+      <h3 id="hanami-a-href-https-github-com-hanami-hanami-blob-master-changelog-md-v072-2016-02-09-v0-7-2-a-" class="title"><a name="hanami-a-href-https-github-com-hanami-hanami-blob-master-changelog-md-v072-2016-02-09-v0-7-2-a-" class="anchor" href="#hanami-a-href-https-github-com-hanami-hanami-blob-master-changelog-md-v072-2016-02-09-v0-7-2-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>hanami <a href="https://github.com/hanami/hanami/blob/master/CHANGELOG.md#v072---2016-02-09">v0.7.2</a></h3>
+    
+<ul>
+<li>Fixed routing issue when static assets server tried to hijiack paths that are matching directories in public directory [<a href="https://github.com/AlfonsoUceda">Alfonso Uceda Pompa</a>]</li>
+</ul>
+
+      <h2 id="upgrade-instructions" class="title"><a name="upgrade-instructions" class="anchor" href="#upgrade-instructions">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Upgrade Instructions</h2>
+    
+<p>In order to get these bug fixes edit <code>Gemfile</code> to make sure it uses the right dependencies and then run <code>bundle update</code> from the root of the project.</p>
+]]></content>
+     </entry>
+     <entry>
+       <title>Announcing Hanami v0.7.1</title>
+       <id>http://hanamirb.org/blog/2016/02/05/announcing-hanami-071.html</id>
+       <link rel="alternate" href="http://hanamirb.org/blog/2016/02/05/announcing-hanami-071.html"/>
+       <updated>2016-02-05T15:41:00+00:00</updated>
+       <author>
+         <name>Trung Lê</name>
+       </author>
+       <summary>
+         Fixes for static assets serving, Hanami console and minor improvements
+
+       </summary>
+       <content type="html"><![CDATA[<p>This is a patch release that addresses some bugs reported after <a href="/blog/2016/01/22/lotus-is-now-hanami.html">v0.7.0 release</a>.</p>
+
+      <h2 id="bug-fixes" class="title"><a name="bug-fixes" class="anchor" href="#bug-fixes">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Bug Fixes</h2>
+    
+      <h3 id="hanami-a-href-https-github-com-hanami-hanami-blob-master-changelog-md-v071-2016-02-05-v0-7-1-a-" class="title"><a name="hanami-a-href-https-github-com-hanami-hanami-blob-master-changelog-md-v071-2016-02-05-v0-7-1-a-" class="anchor" href="#hanami-a-href-https-github-com-hanami-hanami-blob-master-changelog-md-v071-2016-02-05-v0-7-1-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>hanami <a href="https://github.com/hanami/hanami/blob/master/CHANGELOG.md#v071---2016-02-05">v0.7.1</a></h3>
+    
+<ul>
+<li>Fix console engine fallback [<a href="https://github.com/railsme">Anatolii Didukh</a>]</li>
+<li>Fixed routing issue when static assets server tried to hijiack requests belonging to dynamic endpoints [<a href="https://github.com/davydovanton">Anton Davydov</a>]</li>
+</ul>
+
+      <h3 id="hanami-utils-a-href-https-github-com-hanami-utils-blob-master-changelog-md-v071-2016-02-05-v0-7-1-a-" class="title"><a name="hanami-utils-a-href-https-github-com-hanami-utils-blob-master-changelog-md-v071-2016-02-05-v0-7-1-a-" class="anchor" href="#hanami-utils-a-href-https-github-com-hanami-utils-blob-master-changelog-md-v071-2016-02-05-v0-7-1-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>hanami-utils <a href="https://github.com/hanami/utils/blob/master/CHANGELOG.md#v071---2016-02-05">v0.7.1</a></h3>
+    
+<ul>
+<li>Allow non string objects to be escaped by <code>Hanami::Utils::Escape</code> [<a href="https://github.com/cllns">Sean Collins</a>]</li>
+<li><code>Hanami::Utils::Escape</code>: fixed Ruby warning for <code>String#chars</code> with a block, which is deprecated. Using <code>String#each_char</code> now [<a href="https://github.com/y-yagi">Yuuji Yaginuma</a>]</li>
+</ul>
+
+      <h3 id="hanami-router-a-href-https-github-com-hanami-router-blob-master-changelog-md-v062-2016-02-05-v0-6-2-a-" class="title"><a name="hanami-router-a-href-https-github-com-hanami-router-blob-master-changelog-md-v062-2016-02-05-v0-6-2-a-" class="anchor" href="#hanami-router-a-href-https-github-com-hanami-router-blob-master-changelog-md-v062-2016-02-05-v0-6-2-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>hanami-router <a href="https://github.com/hanami/router/blob/master/CHANGELOG.md#v062---2016-02-05">v0.6.2</a></h3>
+    
+<ul>
+<li>Fix double leading slash for Capybara&#39;s <code>current_path</code> [<a href="https://github.com/davydovanton">Anton Davydov</a>]</li>
+</ul>
+
+      <h3 id="hanami-controller-a-href-https-github-com-hanami-controller-blob-master-changelog-md-v061-2016-02-05-v0-6-1-a-" class="title"><a name="hanami-controller-a-href-https-github-com-hanami-controller-blob-master-changelog-md-v061-2016-02-05-v0-6-1-a-" class="anchor" href="#hanami-controller-a-href-https-github-com-hanami-controller-blob-master-changelog-md-v061-2016-02-05-v0-6-1-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>hanami-controller <a href="https://github.com/hanami/controller/blob/master/CHANGELOG.md#v061---2016-02-05">v0.6.1</a></h3>
+    
+<ul>
+<li>Optimise memory usage by freezing MIME types constant [<a href="https://github.com/railsme">Anatolii Didukh</a>]</li>
+</ul>
+
+      <h3 id="hanami-view-a-href-https-github-com-hanami-view-blob-master-changelog-md-v061-2016-02-05-v0-6-1-a-" class="title"><a name="hanami-view-a-href-https-github-com-hanami-view-blob-master-changelog-md-v061-2016-02-05-v0-6-1-a-" class="anchor" href="#hanami-view-a-href-https-github-com-hanami-view-blob-master-changelog-md-v061-2016-02-05-v0-6-1-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>hanami-view <a href="https://github.com/hanami/view/blob/master/CHANGELOG.md#v061---2016-02-05">v0.6.1</a></h3>
+    
+<ul>
+<li>Preload partial templates in order to boost performances for partials rendering (2x faster) [<a href="https://github.com/stevehook">Steve Hook</a>]</li>
+</ul>
+
+      <h3 id="hanami-model-a-href-https-github-com-hanami-model-blob-master-changelog-md-v062-2016-02-05-v0-6-2-a-" class="title"><a name="hanami-model-a-href-https-github-com-hanami-model-blob-master-changelog-md-v062-2016-02-05-v0-6-2-a-" class="anchor" href="#hanami-model-a-href-https-github-com-hanami-model-blob-master-changelog-md-v062-2016-02-05-v0-6-2-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>hanami-model <a href="https://github.com/hanami/model/blob/master/CHANGELOG.md#v062---2016-02-05">v0.6.2</a></h3>
+    
+<ul>
+<li>Mapping SQL Adapter&#39;s errors as <code>Hanami::Model</code> errors [<a href="https://github.com/hlegius">Hélio Costa e Silva</a>] &amp; [<a href="https://github.com/pascalbetz">Pascal Betz</a>]</li>
+</ul>
+
+      <h3 id="hanami-assets-a-href-https-github-com-hanami-assets-blob-master-changelog-md-v021-2016-02-05-v0-2-1-a-" class="title"><a name="hanami-assets-a-href-https-github-com-hanami-assets-blob-master-changelog-md-v021-2016-02-05-v0-2-1-a-" class="anchor" href="#hanami-assets-a-href-https-github-com-hanami-assets-blob-master-changelog-md-v021-2016-02-05-v0-2-1-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>hanami-assets <a href="https://github.com/hanami/assets/blob/master/CHANGELOG.md#v021---2016-02-05">v0.2.1</a></h3>
+    
+<ul>
+<li>Fix recursive Sass imports [<a href="https://github.com/jodosha">Luca Guidi</a>]</li>
+<li>Ensure to truncate assets in <code>public/</code> before to precompile/copy them [<a href="https://github.com/jodosha">Luca Guidi</a>]</li>
+</ul>
+
+      <h2 id="upgrade-instructions" class="title"><a name="upgrade-instructions" class="anchor" href="#upgrade-instructions">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Upgrade Instructions</h2>
+    
+<p>In order to get these bug fixes edit <code>Gemfile</code> to make sure it uses the right dependencies and then run <code>bundle update</code> from the root of the project.</p>
+]]></content>
+     </entry>
+     <entry>
+       <title>Lotus is now Hanami</title>
+       <id>http://hanamirb.org/blog/2016/01/22/lotus-is-now-hanami.html</id>
+       <link rel="alternate" href="http://hanamirb.org/blog/2016/01/22/lotus-is-now-hanami.html"/>
+       <updated>2016-01-22T14:54:00+00:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Lotus is now Hanami
+
+       </summary>
+       <content type="html"><![CDATA[
+      <h2 id="lotus" class="title"><a name="lotus" class="anchor" href="#lotus">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Lotus</h2>
+    
+<p>More than three years ago I started hacking with this tiny web framework.
+Naming is hard, as you know, and the choice felt on something that has a deep meaning for me: <strong>Lotus</strong>.</p>
+
+      <h3 id="the-origins" class="title"><a name="the-origins" class="anchor" href="#the-origins">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>The Origins</h3>
+    
+<p>I was aware of the famous IBM&#39;s office suite, but I thought it was something belonging to the past and would have never expected Lotus (my Lotus) to become known in Ruby ecosystem.
+Now, this name collision has caused minor confusion outside of Ruby Community.
+HackerNews or <a href="https://www.thoughtworks.com/radar/languages-and-frameworks/lotus">ThoughtWork&#39;s Radar</a> are clear examples.
+There always been the need to specify Lotus for Ruby.</p>
+
+      <h3 id="the-problem" class="title"><a name="the-problem" class="anchor" href="#the-problem">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>The Problem</h3>
+    
+<p>It wasn&#39;t a huge problem until a few weeks ago.
+We received <a href="https://github.com/hanami/hanami/issues/445">an issue on GitHub</a> from an IBM employee, who informally made us to notice about the fact that they hold the trademark in software industry for Lotus.
+That was the first warning that I could&#39;ve been sued in the future by them.</p>
+
+      <h3 id="the-decision" class="title"><a name="the-decision" class="anchor" href="#the-decision">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>The Decision</h3>
+    
+<p>In the subsequent two weeks, I&#39;ve talked with our Community, with a lawyer and the decision is to change the name.</p>
+
+<p>I want to clarify that I never received a letter by IBM, it&#39;s only a strategic choice.
+First of all, the word &quot;Lotus&quot; is too much popular and it always been hard for me to track online discussions.</p>
+
+<p>Secondly, sharing the same name will always be source of confusion for developers.
+Better to find a new name: <strong>Hanami</strong>.</p>
+
+      <h2 id="hanami" class="title"><a name="hanami" class="anchor" href="#hanami">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Hanami</h2>
+    
+<p>Hanami is a japanese tradition of watching the cherry trees to blossom during spring.
+During this season, they celebrate this event all together in their beautiful gardens.</p>
+
+<p>This choice remarks a continuity with the past of the project and it also puts a strong emphasis on <strong>the importance that our Community has for us</strong>.</p>
+
+<p><strong>This is also a tribute to Matz and Ruby origins.</strong></p>
+
+      <h3 id="new-website" class="title"><a name="new-website" class="anchor" href="#new-website">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>New Website</h3>
+    
+<p>The new website is <a href="http://hanamirb.org">http://hanamirb.org</a>, and you can find us on Twitter as <a href="https://twitter.com/hanamirb">@hanamirb</a> (<a href="https://twitter.com/search?f=tweets&amp;vertical=default&amp;q=hanamirb">#hanamirb</a>).
+We moved the source code at <a href="https://github.com/hanami">https://github.com/hanami</a>.</p>
+
+<p>The main Ruby gem is now <a href="https://rubygems.org/gems/hanami"><code>hanami</code></a>.</p>
+
+      <h3 id="gem-releases" class="title"><a name="gem-releases" class="anchor" href="#gem-releases">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Gem Releases</h3>
+    
+<p>In order to reflect this reorganization, we release today all the gems under the new name.
+We bumped the minor version because this is a breaking change.</p>
+
+<ul>
+<li><code>hanami-0.7.0</code> (equivalent to <code>lotusrb-0.6.1</code>)</li>
+<li><code>hanami-utils-0.7.0</code> (equivalent to <code>lotus-utils-0.6.1</code>)</li>
+<li><code>hanami-validations-0.5.0</code> (equivalent to <code>lotus-validations-0.4.0</code>)</li>
+<li><code>hanami-router-0.6.0</code> (equivalent to <code>lotus-router-0.5.1</code>)</li>
+<li><code>hanami-helpers-0.3.0</code> (equivalent to <code>lotus-helpers-0.2.6</code>)</li>
+<li><code>hanami-model-0.6.0</code> (equivalent to <code>lotus-model-0.5.2</code>)</li>
+<li><code>hanami-view-0.6.0</code> (equivalent to <code>lotus-view-0.5.0</code>)</li>
+<li><code>hanami-controller-0.6.0</code> (equivalent to <code>lotus-controller-0.5.1</code>)</li>
+<li><code>hanami-assets-0.2.0</code> (equivalent to <code>lotus-assets-0.1.0</code>)</li>
+<li><code>hanami-mailer-0.2.0</code> (equivalent to <code>lotus-mailer-0.1.0</code>)</li>
+</ul>
+
+      <h3 id="upgrade-notes" class="title"><a name="upgrade-notes" class="anchor" href="#upgrade-notes">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Upgrade Notes</h3>
+    
+<p>Please read the <a href="/guides/upgrade-notes/v070">upgrade notes for v0.7.0</a> in our Guides.</p>
+]]></content>
+     </entry>
+     <entry>
+       <title>Announcing Lotus v0.6.1</title>
+       <id>http://hanamirb.org/blog/2016/01/19/announcing-lotus-061.html</id>
+       <link rel="alternate" href="http://hanamirb.org/blog/2016/01/19/announcing-lotus-061.html"/>
+       <updated>2016-01-19T08:48:00+00:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Minor fixes for CLI, cookie sessions and database exceptions.
+
+       </summary>
+       <content type="html"><![CDATA[<p>This is a patch release that addresses some bugs reported after <a href="/blog/2016/01/12/announcing-lotus-060.html">v0.6.0 release</a>.</p>
+
+      <h2 id="bug-fixes" class="title"><a name="bug-fixes" class="anchor" href="#bug-fixes">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Bug Fixes</h2>
+    
+      <h3 id="lotusrb-a-href-https-github-com-lotus-lotus-blob-master-changelog-md-v061-2016-01-19-v0-6-1-a-" class="title"><a name="lotusrb-a-href-https-github-com-lotus-lotus-blob-master-changelog-md-v061-2016-01-19-v0-6-1-a-" class="anchor" href="#lotusrb-a-href-https-github-com-lotus-lotus-blob-master-changelog-md-v061-2016-01-19-v0-6-1-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>lotusrb <a href="https://github.com/lotus/lotus/blob/master/CHANGELOG.md#v061---2016-01-19">v0.6.1</a></h3>
+    
+<ul>
+<li>Show the current app name in Welcome page (eg. <code>/admin</code> shows instructions on how to generate an action for <code>Admin</code> app) [<a href="https://github.com/davydovanton">Anton Davydov</a>]</li>
+<li>Fix project creation when name contains dashes (eg. <code>&quot;awesome-project&quot; =&gt; &quot;AwesomeProject&quot;</code>) [<a href="https://github.com/davydovanton">Anton Davydov</a>]</li>
+<li>Ensure to add assets related entries to <code>.gitignore</code> when a project is generated with the <code>--database</code> flag [<a href="https://github.com/davydovanton">Anton Davydov</a>]</li>
+<li>Avoid blank lines in generated <code>Gemfile</code> [<a href="https://github.com/deepj">deepj</a>]</li>
+<li>Fix for <code>lotus destroy app</code>: it doesn&#39;t cause a syntax error in <code>config/application.rb</code> anymore [<a href="https://github.com/trexnix">trexnix</a>]</li>
+<li>Ensure console to use the bundled engine [<a href="https://github.com/sergikon">Serg Ikonnikov</a> &amp; <a href="https://github.com/joneslee85">Trung Lê</a>]</li>
+</ul>
+
+      <h3 id="lotus-utils-a-href-https-github-com-lotus-utils-blob-master-changelog-md-v061-2016-01-19-v0-6-1-a-" class="title"><a name="lotus-utils-a-href-https-github-com-lotus-utils-blob-master-changelog-md-v061-2016-01-19-v0-6-1-a-" class="anchor" href="#lotus-utils-a-href-https-github-com-lotus-utils-blob-master-changelog-md-v061-2016-01-19-v0-6-1-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>lotus-utils <a href="https://github.com/lotus/utils/blob/master/CHANGELOG.md#v061---2016-01-19">v0.6.1</a></h3>
+    
+<ul>
+<li>Ensure <code>Lotus::Utils::String#classify</code> to work properly with dashes (eg. <code>&quot;app-store&quot; =&gt; &quot;App::Store&quot;</code>) [<a href="https://github.com/davydovanton">Anton Davydov</a>]</li>
+</ul>
+
+      <h3 id="lotus-router-a-href-https-github-com-lotus-router-blob-master-changelog-md-v051-2016-01-19-v0-5-1-a-" class="title"><a name="lotus-router-a-href-https-github-com-lotus-router-blob-master-changelog-md-v051-2016-01-19-v0-5-1-a-" class="anchor" href="#lotus-router-a-href-https-github-com-lotus-router-blob-master-changelog-md-v051-2016-01-19-v0-5-1-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>lotus-router <a href="https://github.com/lotus/router/blob/master/CHANGELOG.md#v051---2016-01-19">v0.5.1</a></h3>
+    
+<ul>
+<li>Print stacked lines for routes inspection [<a href="https://github.com/davydovanton">Anton Davydov</a>]</li>
+</ul>
+
+      <h3 id="lotus-controller-a-href-https-github-com-lotus-controller-blob-master-changelog-md-v051-2016-01-19-v0-5-1-a-" class="title"><a name="lotus-controller-a-href-https-github-com-lotus-controller-blob-master-changelog-md-v051-2016-01-19-v0-5-1-a-" class="anchor" href="#lotus-controller-a-href-https-github-com-lotus-controller-blob-master-changelog-md-v051-2016-01-19-v0-5-1-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>lotus-controller <a href="https://github.com/lotus/controller/blob/master/CHANGELOG.md#v051---2016-01-19">v0.5.1</a></h3>
+    
+<ul>
+<li>Ensure <code>rack.session</code> cookie to not be sent twice when both <code>Lotus::Action::Cookies</code> and <code>Rack::Session::Cookie</code> are used together [<a href="https://github.com/AlfonsoUceda">Alfonso Uceda</a>]</li>
+</ul>
+
+      <h3 id="lotus-model-a-href-https-github-com-lotus-model-blob-master-changelog-md-v052-2016-01-19-v0-5-2-a-" class="title"><a name="lotus-model-a-href-https-github-com-lotus-model-blob-master-changelog-md-v052-2016-01-19-v0-5-2-a-" class="anchor" href="#lotus-model-a-href-https-github-com-lotus-model-blob-master-changelog-md-v052-2016-01-19-v0-5-2-a-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>lotus-model <a href="https://github.com/lotus/model/blob/master/CHANGELOG.md#v052---2016-01-19">v0.5.2</a></h3>
+    
+<ul>
+<li>Improved error message for <code>Lotus::Model::Adapters::NoAdapterError</code> [<a href="https://github.com/cllns">Sean Collins</a>]</li>
+<li>Catch Sequel exceptions and re-raise as <code>Lotus::Model::Error</code> [<a href="https://github.com/Moratorius">Kyle Chong</a> &amp; <a href="https://github.com/joneslee85">Trung Lê</a>]</li>
+</ul>
+
+      <h2 id="upgrade-instructions" class="title"><a name="upgrade-instructions" class="anchor" href="#upgrade-instructions">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Upgrade Instructions</h2>
+    
+<p>In order to get these bug fixes, just run <code>bundle update</code> from the root of the project.</p>
+]]></content>
+     </entry>
+     <entry>
+       <title>Announcing Lotus v0.6.0</title>
+       <id>http://hanamirb.org/blog/2016/01/12/announcing-lotus-060.html</id>
+       <link rel="alternate" href="http://hanamirb.org/blog/2016/01/12/announcing-lotus-060.html"/>
+       <updated>2016-01-12T12:57:00+00:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Features: Assets, custom initializers, default Rake tasks, and destroy command.
+
+       </summary>
+       <content type="html"><![CDATA[<p>This new release makes Lotus a complete web framework for Ruby.
+It ships with the last important set of features that we planned: assets.</p>
+
+<p><strong>We have now everything we need to build web applications with Lotus.</strong></p>
+
+      <h2 id="features" class="title"><a name="features" class="anchor" href="#features">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Features</h2>
+    
+      <h3 id="assets" class="title"><a name="assets" class="anchor" href="#assets">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Assets</h3>
+    
+<p>As of Lotus v0.6.0, we now have a full set of features for assets management, such as:</p>
+
+<ul>
+<li><a href="/guides/helpers/assets">Helpers</a></li>
+<li><a href="/guides/assets/preprocessors">Preprocessors</a> (<a href="http://sass-lang.com">Sass</a>, <a href="http://lesscss.org">Less</a>, <a href="http://es6-features.org">ES6</a>, <a href="https://jsx.github.io">JSX</a>, <a href="http://coffeescript.org">CoffeeScript</a>, <a href="http://opalrb.org">Opal</a>, etc..)</li>
+<li><a href="/guides/assets/compressors">Compressors</a> (<a href="http://yui.github.io/yuicompressor">YUI</a>, <a href="http://lisperator.net/uglifyjs">UglifyJS2</a>, <a href="https://developers.google.com/closure/compiler">Google Closure Compiler</a>, <a href="http://sass-lang.com">Sass</a>, etc..)</li>
+<li><a href="/guides/command-line/assets">Deployment</a> (precompile, compress, checksum)</li>
+<li><a href="/guides/assets/content-delivery-network">Content Delivery Network</a></li>
+<li><a href="/blog/2015/12/29/introducing-assets.html">Heroku support</a></li>
+<li><a href="/guides/assets/overview">Third Party Gems</a> (eg. <code>bootstrap</code> gem will support soon Lotus out of the box)</li>
+<li>A new <a href="/guides/assets/overview">Rack middleware</a> to serve static assets</li>
+<li>Lazy precompilation + cache in development mode</li>
+</ul>
+
+<p>Thanks to <a href="https://github.com/leighhalliday">Leigh Halliday</a>, <a href="https://github.com/Nerian">Gonzalo Rodríguez-Baltanás Díaz</a>, <a href="https://github.com/deepj">deepj</a>, <a href="https://github.com/michaeldeol">Michael Deol</a>, <a href="https://github.com/tak1n">Benjamin Klotz</a>, <a href="https://github.com/klebervirgilio">Kleber Correia</a> for their contributions and help.</p>
+
+<p>[Read the <a href="/guides/assets/overview">guides</a> and the <a href="/blog/2015/12/29/introducing-assets.html">announcement</a>]</p>
+
+      <h3 id="custom-initializers" class="title"><a name="custom-initializers" class="anchor" href="#custom-initializers">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Custom Initializers</h3>
+    
+<p>For each application under <code>apps/</code>, now we can <strong>optionally</strong> have a special directory (eg. <code>apps/web/config/initializers</code>) where to put Ruby source files to initialize that specific application.
+Starting from <code>v0.6.0</code>, new projects and applications will be generated with that directory.</p>
+
+<p>Thanks to <a href="https://github.com/lucasallan">Lucas Allan</a> for this new feature.</p>
+
+<p>[Read the <a href="/guides/applications/initializers">guides</a>]</p>
+
+      <h3 id="default-rake-tasks" class="title"><a name="default-rake-tasks" class="anchor" href="#default-rake-tasks">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Default Rake Tasks</h3>
+    
+<p>Lotus projects now ship with two default Rake tasks: <code>:preload</code> and <code>:environment</code>.
+The first is a lightweight way to load <strong>only</strong> the configurations of a project, while the latter loads the entire application.
+We can use them as requirement for our Rake tasks:</p>
+<pre class="language-ruby ruby"><code><span class="c1"># Rakefile</span>
+<span class="c1"># ...</span>
+
+<span class="n">task</span> <span class="ss">print_info: :preload</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'LOTUS_ENV'</span><span class="p">]</span>
+  <span class="nb">puts</span> <span class="n">defined?</span><span class="p">(</span><span class="no">UserRepository</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="n">task</span> <span class="ss">clear_users: :environment</span> <span class="k">do</span>
+  <span class="no">UserRepository</span><span class="p">.</span><span class="nf">clear</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>We can invoke these new taks with:</p>
+<pre class="language-ruby shell"><code>bundle <span class="nb">exec </span>rake print_info
+<span class="c"># =&gt; "development"</span>
+<span class="c"># =&gt; nil</span>
+</code></pre>
+<pre class="language-ruby shell"><code>bundle <span class="nb">exec </span>rake clear_users
+</code></pre>
+
+<p>[Read the <a href="/guides/applications/rake">guides</a>]</p>
+
+      <h3 id="destroy-command" class="title"><a name="destroy-command" class="anchor" href="#destroy-command">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Destroy Command</h3>
+    
+<p>We have introduced a new CLI command <code>lotus destroy</code>.
+It has the role of destroy applications (<code>apps/</code>), actions, entities, repositories, migrations, mailers and their related testing code.</p>
+<pre class="language-ruby shell"><code>bundle <span class="nb">exec </span>lotus destroy action web home#index
+</code></pre>
+
+<p>Thanks to <a href="https://github.com/t4deu">Tadeu Valentt</a> and <a href="https://github.com/lucasallan">Lucas Allan</a> for this feature.</p>
+
+      <h2 id="minor-changes-amp-improvements" class="title"><a name="minor-changes-amp-improvements" class="anchor" href="#minor-changes-amp-improvements">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Minor Changes &amp; Improvements</h2>
+    
+<p>Pluralizations can be <a href="https://github.com/lotus/utils/pull/90">customized</a> by adding exceptions to default inflections.</p>
+
+<p>Action generator is now <a href="https://github.com/lotus/lotus/pull/414">smarter</a> and it can generate a route with the right HTTP verb, according to our REST conventions. Thanks to <a href="https://github.com/cllns">Sean Collins</a>.</p>
+
+<p>Special thanks goes to <a href="https://github.com/t4deu">Tadeu Valentt</a>, <a href="https://github.com/pascalbetz">Pascal Betz</a>, <a href="https://github.com/aderyabin">Andrey Deryabin</a>, <a href="https://github.com/davydovanton">Anton Davydov</a>, <a href="https://github.com/caius">Caius Durling</a>, <a href="https://github.com/jasoncharnes">Jason Charnes</a>, <a href="https://github.com/cllns">Sean Collins</a>, and <a href="https://github.com/kenglxn">Ken Gullaksen</a> for their work to make our CLI stronger than ever.</p>
+
+<p>Thanks to <a href="https://github.com/oreoshake">Neil Matatall</a> to prevent timing attacks for CSRF tokens comparision, <a href="https://github.com/stravid">David Strauß</a> for making body parsing compatible with JSON API, <a href="https://github.com/karimmtarek">Karim Tarek</a> and <a href="https://github.com/liamdawson">Liam Dawson</a> for exception normalization across all our gems, <a href="https://github.com/vlazar">Vladislav Zarakovsky</a> for making Force SSL compliant with Rack SPEC, while <a href="https://github.com/berfarah">Bernardo Farah</a> fixed chunked responses, to <a href="https://github.com/constXife">Karim Kiatlottiavi</a> for fixing HTML escape encoding, to <a href="https://github.com/rpanachi">Rodrigo Panachi</a> for fixing CSRF form, to <a href="https://github.com/hlegius">Hélio Costa</a> and <a href="https://github.com/pascalbetz">Pascal Betz</a> for fixing how validations treat blank strings, to <a href="https://github.com/huynhquancam">Cẩm Huỳnh</a> for making <code>#html</code> helper to accept blocks.</p>
+
+<p>We&#39;re thankful for the help that <a href="https://github.com/hieuk09">Hiếu Nguyễn</a>, <a href="https://github.com/taylorfinnell">Taylor Finnell</a>, <a href="https://github.com/aderyabin">Andrey Deryabin</a>, <a href="https://github.com/cfcosta">Cainã Costa</a>, <a href="https://github.com/skyriser">Shin-ichi Ueda</a>, <a href="https://github.com/cabeza-de-termo">Martin Rubi</a> offered for other minor improvement and fixes.</p>
+
+      <h2 id="deprecations" class="title"><a name="deprecations" class="anchor" href="#deprecations">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Deprecations</h2>
+    
+      <h3 id="ruby-2-0-amp-2-1" class="title"><a name="ruby-2-0-amp-2-1" class="anchor" href="#ruby-2-0-amp-2-1">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Ruby 2.0 &amp; 2.1</h3>
+    
+<p>Ruby 2.0 and 2.1 are now deprecated.
+We took this decision because MRI 2.0 will reach End Of Life (EOL) next month and because keeping 2.1 around would mean to leave our internals complex because of <em>&quot;safe indifferent access&quot;</em>.</p>
+
+<p>Prior to MRI 2.2, <code>Symbol</code> instances weren&#39;t garbage collected.
+This has caused security problems for Ruby applications.
+If not properly filtered, untrusted input could&#39;ve been lead to attacks where the server memory is entirely consumed by Ruby VM due to <code>Symbol</code> abuse.</p>
+
+<p>To prevent this kind of attack, we always used strings for incoming HTTP parameters.
+At the same time, we wanted to offer convenient access to these params via symbols (eg <code>params[:id]</code>).
+To make this possible we had to carefully filter and convert data over and over.</p>
+
+<p>By dropping 2.1, we can simplify our internal code because we don&#39;t have to worry about GC and symbols security threats.
+At the same time we can provide minor perf improvements due to the lack of these conversions.</p>
+
+      <h2 id="breaking-changes" class="title"><a name="breaking-changes" class="anchor" href="#breaking-changes">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Breaking Changes</h2>
+    
+<p>There are several breaking changes due to assets features.</p>
+
+<p><strong>If you&#39;re upgrading from an earlier version, please make sure to read the detailed <a href="/guides/upgrade-notes/v060">upgrade guide</a> that we prepared.</strong>
+It will take a few minutes to get up and running again.</p>
+
+      <h2 id="what-39-s-next-" class="title"><a name="what-39-s-next-" class="anchor" href="#what-39-s-next-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>What&#39;s Next?</h2>
+    
+<p>Our focus for the next release (<code>v0.7.0</code>) will be about <code>Lotus::Model</code> and <code>Lotus::Validations</code>.
+We want to make <strong>stronger</strong> and <strong>flexible</strong> the way we validate and persist data.</p>
+
+<p>We recognized it&#39;s <strong>too verbose</strong> to always require <strong>database mapping</strong> even if it can be avoided (eg with SQL databases).
+It&#39;s <strong>not necessary</strong> to instantiate an entity to write a record, repositories can <strong>directly accept data</strong> and persist it.</p>
+
+<p>We want to <strong>simplify</strong> our day to day life with Lotus.</p>
+]]></content>
+     </entry>
+     <entry>
+       <title>Introducing Assets</title>
+       <id>http://hanamirb.org/blog/2015/12/29/introducing-assets.html</id>
+       <link rel="alternate" href="http://hanamirb.org/blog/2015/12/29/introducing-assets.html"/>
+       <updated>2015-12-29T16:12:00+00:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Introducing assets features: helpers, preprocessors, EcmaScript 6, deployment, checksums, CDN, and third party gems!
+
+       </summary>
+       <content type="html"><![CDATA[<p>We&#39;re proud to announce that the upcoming release of Lotus (<code>v0.6.0</code>) will ship with a new set of facilities for assets management.</p>
+
+      <h2 id="helpers" class="title"><a name="helpers" class="anchor" href="#helpers">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Helpers</h2>
+    
+<p>A bunch of <strong>new helpers</strong> is available for your views and templates, with the purpose of building rich web pages:</p>
+
+<ul>
+<li><code>javascript</code></li>
+<li><code>stylesheet</code></li>
+<li><code>favicon</code></li>
+<li><code>image</code></li>
+<li><code>video</code></li>
+<li><code>audio</code></li>
+<li><code>asset_path</code></li>
+<li><code>asset_url</code></li>
+</ul>
+
+<p>They have the role of assist you in the process of keeping your templates tidy.
+At the same time, they are able to output structured HTML and manage complex URL logic.</p>
+
+<p>Here&#39;s a basic example:</p>
+<pre class="language-ruby erb"><code><span class="cp">&lt;!doctype HTML&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Assets example<span class="nt">&lt;/title&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">stylesheet</span> <span class="s1">'reset'</span><span class="p">,</span> <span class="s1">'grid'</span><span class="p">,</span> <span class="s1">'main'</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+
+  <span class="nt">&lt;body&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">javascript</span> <span class="s1">'https://code.jquery.com/jquery-2.1.4.min.js'</span><span class="p">,</span> <span class="s1">'application'</span> <span class="cp">%&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">javascript</span> <span class="s1">'modals'</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+
+<p>And the result.</p>
+<pre class="language-ruby html"><code><span class="cp">&lt;!doctype HTML&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Assets example<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/reset.css"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/grid.css"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/main.css"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+
+  <span class="nt">&lt;body&gt;</span>
+  <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-2.1.4.min.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/application.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/modals.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+
+      <h2 id="preprocessors" class="title"><a name="preprocessors" class="anchor" href="#preprocessors">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Preprocessors</h2>
+    
+<p>Lotus now supports assets preprocessors.
+You can write stylesheets with <a href="http://sass-lang.com">Sass</a> or javascripts with <a href="http://es6-features.org">ES6</a> syntax and let the framework to lazy compile them during development of precompile all of them at the deploy time.</p>
+
+<p>We use <a href="https://github.com/rtomayko/tilt">Tilt</a> to provide support for the most common libraries, such as <a href="http://lesscss.org">Less</a>, <a href="https://jsx.github.io">JSX</a>, <a href="http://coffeescript.org">CoffeScript</a>, <a href="http://opalrb.org">Opal</a>, <a href="http://handlebarsjs.com">Handlebars</a>, <a href="https://github.com/rails/jbuilder">JBuilder</a>, etc..
+In order to use one or more of them, be sure to include the corresponding gem into your <code>Gemfile</code> and require the library.</p>
+
+<p>Please note that some engines may require <a href="https://nodejs.org/en">Node.js</a>.</p>
+
+      <h3 id="ecmascript-6" class="title"><a name="ecmascript-6" class="anchor" href="#ecmascript-6">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>EcmaScript 6</h3>
+    
+<p>We strongly suggest to use <a href="http://es6-features.org/">EcmaScript 6</a> for your next project.
+It is not yet fully <a href="https://kangax.github.io/compat-table/es6/">supported</a> by browser vendors, but it&#39;s the future of JavaScript.</p>
+
+<p>As of today, you need to transpile ES6 code into something understandable by current browsers, which is ES5.
+For this purpose we support <a href="https://babeljs.io">Babel</a>. <strike>Make sure to require <code>&#39;lotus/assets/es6&#39;</code> to enable it.</strike></p>
+
+      <h2 id="sources" class="title"><a name="sources" class="anchor" href="#sources">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Sources</h2>
+    
+<p>Each application under <code>apps/</code> in a Lotus project, can have its own set of assets sources.
+The default directory is <code>assets</code>, for instance <code>apps/web/assets</code>.</p>
+
+<p>You can add other directories if you need to vendor assets, eg: <code>apps/web/vendor/assets</code>.</p>
+
+      <h2 id="third-party-gems" class="title"><a name="third-party-gems" class="anchor" href="#third-party-gems">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Third Party Gems</h2>
+    
+<p>Developers can maintain gems that distribute assets for Lotus. For instance <code>lotus-ember</code> or <code>lotus-jquery</code>.</p>
+
+<p>As a gem developer, you must add one or more paths, where the assets are stored inside the gem.</p>
+<pre class="language-ruby ruby"><code><span class="c1"># lib/lotus/jquery.rb</span>
+<span class="no">Lotus</span><span class="o">::</span><span class="no">Assets</span><span class="p">.</span><span class="nf">sources</span> <span class="o">&lt;&lt;</span> <span class="s1">'/path/to/jquery'</span>
+</code></pre>
+
+      <h2 id="deployment" class="title"><a name="deployment" class="anchor" href="#deployment">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Deployment</h2>
+    
+<p>This release will ship with a new command: <code>lotus assets precompile</code>; which can be used to at the deploy time.</p>
+
+<p>Assets are loaded from the sources of each application (including third party gems) and preprocessed or copied into the public directory of the project.</p>
+
+<p>Each asset is compressed using <strike><a href="http://yui.github.io/yuicompressor">YUI Compressor</a> (which requires <strong>Java 1.4+</strong>)</strike> one of the supported engines: YUI, UglifyJS2, Google Closure, Sass.
+With this step we shrink the file size, to let browser to download them faster.</p>
+
+<p>As last step, we produce another version of the same file that includes the checksum of the assets in the name (see the example below).
+With this trick, we ensure that browsers will always cache the right version of a given asset.</p>
+
+<p>Example:</p>
+<pre class="language-ruby erb"><code><span class="cp">&lt;%=</span> <span class="n">javascript</span> <span class="s1">'application'</span> <span class="cp">%&gt;</span>
+</code></pre>
+<pre class="language-ruby html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/application-d1829dc353b734e3adc24855693b70f9.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+
+      <h3 id="heroku" class="title"><a name="heroku" class="anchor" href="#heroku">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Heroku</h3>
+    
+<p>Assets precompilation just works with Heroku.
+We introduced private Rake tasks to make sure that Lotus can be easily deployed.</p>
+
+<p>Now in just <strong>5 minutes</strong> you can generate a new project and deploy it!</p>
+
+      <h3 id="no-bundling" class="title"><a name="no-bundling" class="anchor" href="#no-bundling">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>No Bundling</h3>
+    
+<p>We <strong>don&#39;t bundle</strong> together all the assets in one gigantic output file.
+There are a few reasons for this. First of all, <strong>simplicity</strong>.</p>
+
+<p>Bundling together dozens of assets, would require a complex dependency system that <strong>slows down your deploys</strong>.</p>
+
+<p>It also demands you to maintain the dependencies between assets.
+With Lotus design, you just &quot;<em>require</em>&quot; assets by adding them to the markup.
+If your <code>users.js</code> depends on jQuery, you do: <code>&lt;%= javascript &#39;jquery&#39;, &#39;users&#39; %&gt;</code> and that&#39;s it.</p>
+
+<p>There also another reason for not bundling them togheter: <strong>HTTP/2</strong>.
+This new version of the protocol is already supported by most popular browsers and it will be shipped soon with Nginx.</p>
+
+<p>This changes the way client and server communicate over the wire.
+Connections will be more efficient with the usage of socket multiplexing.</p>
+
+<p>When we have one huge asset for all the javascripts of our application, this output file will change often.
+For each modification in development, we need to recompile it in production.</p>
+
+<p>This action invalidates the old version of <code>application-ad414f0188b91004debebbe5df37ca05.js</code>, because it contains stale data.
+So we need to generate a new version, let say <code>application-d1829dc353b734e3adc24855693b70f9.js</code>.</p>
+
+<p>At this point the application uses this new file and the browser gets the entire file from scratch.
+Even for a small change, we&#39;re forcing the client to download kilobytes or even megabytes of unmofified javascript code.</p>
+
+<p>With HTTP/2 it&#39;s more efficient to keep small files and let the browser to download only stale resources.</p>
+
+<p>So why build a slow and complex dependency system that will be soon useless because of HTTP/2?</p>
+
+      <h2 id="content-delivery-networks-cdn-" class="title"><a name="content-delivery-networks-cdn-" class="anchor" href="#content-delivery-networks-cdn-">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Content Delivery Networks (CDN)</h2>
+    
+<p>Lotus allows to serve assets via a Content Delivery Network.
+What you need to do, is to specify the CDN URL to the application and then the helpers will return the CDN absolute URL for an asset.</p>
+<pre class="language-ruby erb"><code><span class="cp">&lt;%=</span> <span class="n">javascript</span> <span class="s1">'application'</span> <span class="cp">%&gt;</span>
+</code></pre>
+<pre class="language-ruby html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://123.cloudfront.net/assets/application-d1829dc353b734e3adc24855693b70f9.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+
+      <h2 id="release-date" class="title"><a name="release-date" class="anchor" href="#release-date">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Release Date</h2>
+    
+<p>All these features can be used with Lotus full stack applications starting from <code>v0.6.0</code>, that will be released on <strong>Jan 12th, 2016</strong>.
+If you can&#39;t wait, try it with <a href="https://github.com/lotus/lotus">master branch</a> and let us to know!</p>
+
+<div style="display: inline">
+
+  <iframe src="https://ghbtns.com/github-btn.html?user=lotus&repo=lotus&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
+  <a href="https://news.ycombinator.com/submit" class="hn-button" data-title="Introducing Assets for Lotus (Ruby)" data-url="http://lotusrb.org/blog/2015/12/29/introducing-assets.html" data-count="horizontal" data-style="facebook">Vote on Hacker News</a>
+  <script type="text/javascript">var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+  <script type="text/javascript">
+    reddit_url = "http://lotusrb.org/blog/2015/12/21/announcing-lotus-assets.html";
+  </script>
+  <script type="text/javascript" src="//www.redditstatic.com/button/button1.js"></script>
+</div>
+]]></content>
+     </entry>
+     <entry>
+       <title>Announcing Lotus v0.5.0</title>
+       <id>http://hanamirb.org/blog/2015/09/30/announcing-lotus-050.html</id>
+       <link rel="alternate" href="http://hanamirb.org/blog/2015/09/30/announcing-lotus-050.html"/>
+       <updated>2015-09-30T07:11:00+00:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Features: Mailers, custom data mapper coercions, command / query separation. Rails Girls Summer of Code and Hack Day!
+
+       </summary>
+       <content type="html"><![CDATA[<p>This new Lotus release is an important step towards 1.0!</p>
+
+<p>In the past months we talked with people at conferences, meetups, events, you all are eagerly looking for a <strong>production ready version</strong>.
+This makes us proud of Lotus and we are determined to get there.</p>
+
+<p>That&#39;s why we have decided to <strong>postpone</strong> a few announced features like WebSocket and experimental code reloading.</p>
+
+      <h2 id="features" class="title"><a name="features" class="anchor" href="#features">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Features</h2>
+    
+<p>Let&#39;s have a look at what is shipped with this version.</p>
+
+      <h3 id="mailers" class="title"><a name="mailers" class="anchor" href="#mailers">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Mailers</h3>
+    
+<p>Inês &amp; Rosa (aka <a href="https://twitter.com/teamdeigirls">DEIGirls</a>), are the <a href="http://railsgirlssummerofcode.org">Rails Girls Summer of Code</a> students who worked on mailers.
+During these three months, mentored by <a href="https://github.com/joneslee85">Trung Lê</a>, they learned about Ruby, Lotus and they shipped their first gem: <code>lotus-mailer</code>.
+This is a huge achievement for all of us!</p>
+
+<p>We have introduced a generator, which creates a mailer, the test code and two associated templates for multipart delivery.</p>
+<pre class="language-ruby shell"><code><span class="gp">% </span>bundle <span class="nb">exec </span>lotus generate mailer forgot_password
+      create  spec/bookshelf/mailers/forgot_password_spec.rb
+      create  lib/bookshelf/mailers/forgot_password.rb
+      create  lib/bookshelf/mailers/templates/forgot_password.txt.erb
+      create  lib/bookshelf/mailers/templates/forgot_password.html.erb
+</code></pre>
+
+<p>For simplicity, each mailer can handle <strong>only one use case (feature)</strong>.
+If in our application we need to send emails for several features like: <em>&quot;confirm your email address&quot;</em> or <em>&quot;forgot password&quot;</em>, we will have <code>Mailers::ConfirmEmailAddress</code> and <code>Mailers::ForgotPassword</code> <strong>instead</strong> of a generic <code>UserMailer</code> that manages all these use cases.</p>
+<pre class="language-ruby ruby"><code><span class="c1"># lib/bookshelf/mailers/forgot_password.rb</span>
+<span class="k">class</span> <span class="nc">Mailers</span><span class="o">::</span><span class="no">ForgotPassword</span>
+  <span class="kp">include</span> <span class="no">Lotus</span><span class="o">::</span><span class="no">Mailer</span>
+
+  <span class="n">from</span>    <span class="s1">'noreply@lotusrb.org'</span>
+  <span class="n">to</span>      <span class="s1">'user@example.com'</span>
+  <span class="n">subject</span> <span class="s1">'Hello'</span>
+<span class="k">end</span>
+
+<span class="c1"># Usage</span>
+<span class="no">Mailers</span><span class="o">::</span><span class="no">ForgotPassword</span><span class="p">.</span><span class="nf">deliver</span>
+</code></pre>
+
+<p><a href="https://github.com/lotus/mailer">Lotus::Mailer</a> is built on top of the rock solid <code>mail</code> <a href="https://github.com/mikel/mail">gem</a> by Mikel Lindsaar.</p>
+
+<p><a href="/guides/mailers/overview">Read the guides</a></p>
+
+      <h3 id="custom-data-mapper-coercions" class="title"><a name="custom-data-mapper-coercions" class="anchor" href="#custom-data-mapper-coercions">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Custom Data Mapper Coercions</h3>
+    
+<p>Lotus data mapper supports the most common Ruby data type such as <code>String</code>, <code>Integer</code>, or <code>DateTime</code>.
+Sometimes, this simple approach is not enough to solve the database impedance mismatch on types.</p>
+
+<p>Imagine we have a <code>Book#tags</code>, a collection of strings that we want to store as a <a href="http://www.postgresql.org/docs/9.1/static/arrays.html">Postgres array</a>.
+If we use <code>Array</code> builtin type, our tags aren&#39;t properly translated into a format that is compatible with our column type.</p>
+
+<p>The solution to this problem is to define a custom coercer.</p>
+<pre class="language-ruby ruby"><code><span class="c1"># lib/ext/pg_array.rb</span>
+<span class="nb">require</span> <span class="s1">'lotus/model/coercer'</span>
+<span class="nb">require</span> <span class="s1">'sequel/extensions/pg_array'</span>
+
+<span class="k">class</span> <span class="nc">PGArray</span> <span class="o">&lt;</span> <span class="no">Lotus</span><span class="o">::</span><span class="no">Model</span><span class="o">::</span><span class="no">Coercer</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">dump</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="o">::</span><span class="no">Sequel</span><span class="p">.</span><span class="nf">pg_array</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="ss">:varchar</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">load</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="o">::</span><span class="no">Kernel</span><span class="o">.</span><span class="no">Array</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">unless</span> <span class="n">value</span><span class="p">.</span><span class="nf">nil?</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+<pre class="language-ruby ruby"><code><span class="c1"># lib/bookshelf.rb</span>
+<span class="nb">require_relative</span> <span class="s1">'./ext/pg_array'</span>
+<span class="c1"># ...</span>
+
+<span class="no">Lotus</span><span class="o">::</span><span class="no">Model</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span>
+  <span class="c1"># ...</span>
+  <span class="n">mapping</span> <span class="k">do</span>
+    <span class="c1"># ...</span>
+    <span class="n">collection</span> <span class="ss">:articles</span> <span class="k">do</span>
+      <span class="n">attribute</span> <span class="ss">:id</span><span class="p">,</span>   <span class="no">Integer</span>
+      <span class="n">attribute</span> <span class="ss">:tags</span><span class="p">,</span> <span class="no">PGArray</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span><span class="p">.</span><span class="nf">load!</span>
+</code></pre>
+
+<p><a href="/guides/models/overview">Read the guides</a></p>
+
+      <h3 id="command-query-separation" class="title"><a name="command-query-separation" class="anchor" href="#command-query-separation">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Command / Query Separation</h3>
+    
+<p>When the powerful repositories API doesn&#39;t fit our needs, we can send raw command and queries to the database.
+Until now there was a generic <code>.execute</code> to use. Both the signature and the semantic of this method, became too complex, so we decided to add <code>.fetch</code>.</p>
+
+<p>It returns a <strong>raw dataset</strong> from the database.</p>
+<pre class="language-ruby ruby"><code><span class="c1"># lib/bookshelf/repositories/book_repository.rb</span>
+<span class="k">class</span> <span class="nc">BookRepository</span>
+  <span class="kp">include</span> <span class="no">Lotus</span><span class="o">::</span><span class="no">Repository</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">raw_all</span>
+    <span class="n">fetch</span><span class="p">(</span><span class="s2">"SELECT * FROM books"</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">find_all_titles</span>
+    <span class="n">fetch</span><span class="p">(</span><span class="s2">"SELECT title FROM books"</span><span class="p">).</span><span class="nf">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">book</span><span class="o">|</span>
+      <span class="n">book</span><span class="p">[</span><span class="ss">:title</span><span class="p">]</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>We changed <code>.execute</code> send a raw command and return <code>nil</code>.</p>
+<pre class="language-ruby ruby"><code><span class="c1"># lib/bookshelf/repositories/book_repository.rb</span>
+<span class="k">class</span> <span class="nc">BookRepository</span>
+  <span class="kp">include</span> <span class="no">Lotus</span><span class="o">::</span><span class="no">Repository</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">reset_download_count</span>
+    <span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE books SET download_count = 0"</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<p><a href="/guides/models/repositories">Read the guides</a></p>
+
+      <h3 id="minor-changes" class="title"><a name="minor-changes" class="anchor" href="#minor-changes">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Minor Changes</h3>
+    
+<p>Thanks to <a href="https://github.com/theocodes">Theo Felippe</a> for the MIME type detection work and to <a href="https://github.com/manuwell">Wellington Santos</a> for a better exception handling.
+To <a href="https://github.com/pascalbetz">Pascal Betz</a>, <a href="https://github.com/josemota">José Mota</a>, <a href="https://github.com/awochna">Alex Wochna</a> and <a href="https://github.com/khaiql">Khải Lê</a> for their form helper enhancements, while <a href="https://github.com/vyper">Leonardo Saraiva</a> wrote an expanded version of <code>#link_to</code>.</p>
+
+<p><a href="https://github.com/AlfonsoUceda">Alfonso Uceda</a> added SQL joins, <a href="https://github.com/g3d">Bohdan V.</a> and <a href="https://github.com/ziggurat">Manuel Corrales</a> fixed small Lotus::Model issues, while <a href="https://github.com/brennovich">Brenno Costa</a> worked on JRuby support!</p>
+
+<p>We&#39;re thankful for the improvements and fixes that <a href="https://github.com/benlovell">Ben Lovell</a>, <a href="https://github.com/rpanachi">Rodrigo Panachi</a>, <a href="https://github.com/SleeplessByte">Derk-Jan Karrenbeld</a>, <a href="https://github.com/huynhquancam">Cẩm Huỳnh</a> and <a href="https://github.com/andrii">Andrii Ponomarov</a> did on <code>lotusrb</code>.</p>
+
+      <h3 id="deprecations" class="title"><a name="deprecations" class="anchor" href="#deprecations">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Deprecations</h3>
+    
+      <h4 id="default-format" class="title"><a name="default-format" class="anchor" href="#default-format">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Default Format</h4>
+    
+<p>We deprecated <code>default_format</code> in favor of <code>default_request_format</code>.</p>
+
+<p>We also introduced <code>default_response_format</code> to force a MIME Type, without the need of specify it for each action.
+It defaults to <code>:html</code>, but if you are building a JSON API, you may find useful to set it to <code>:json</code>.</p>
+<pre class="language-ruby ruby"><code><span class="c1"># apps/web/application.rb</span>
+<span class="c1"># ...</span>
+<span class="k">module</span> <span class="nn">Web</span>
+  <span class="k">class</span> <span class="nc">Application</span> <span class="o">&lt;</span> <span class="no">Lotus</span><span class="o">::</span><span class="no">Application</span>
+    <span class="n">configure</span> <span class="k">do</span>
+      <span class="c1"># If you are using this:</span>
+      <span class="n">default_format</span> <span class="ss">:xml</span>
+
+      <span class="c1"># Please rename into:</span>
+      <span class="n">default_request_format</span> <span class="ss">:xml</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+      <h2 id="hack-day" class="title"><a name="hack-day" class="anchor" href="#hack-day">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Hack Day</h2>
+    
+<p>Did you always wanted to play with Lotus but you keep saying: <em>&quot;I don&#39;t have time&quot;</em>?</p>
+
+<p>As Lotus will approach to 1.0, we&#39;ll need your help, your feedback.. and your fun! So, here&#39;s the deal.. we&#39;re organizing a Hack Day later this year!</p>
+
+<p>⬇️ If you want to get alerted, please consider to subscribe to our <a href="http://lotusrb.org/mailing-list/">mailing list</a> using the form below. ⬇️</p>
+
+<p><strong>Until then, happy hacking!</strong></p>
+]]></content>
+     </entry>
+     <entry>
+       <title>Weekly Changelog</title>
+       <id>http://hanamirb.org/blog/2015/07/12/weekly-changelog.html</id>
+       <link rel="alternate" href="http://hanamirb.org/blog/2015/07/12/weekly-changelog.html"/>
+       <updated>2015-07-12T12:42:00+00:00</updated>
+       <author>
+         <name>Trung Lê</name>
+       </author>
+       <summary>
+         Changelog from Jun 29 2015 to Jul 12 2015
+
+       </summary>
+       <content type="html"><![CDATA[
+      <h2 id="releases" class="title"><a name="releases" class="anchor" href="#releases">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Releases</h2>
+    
+<ul>
+<li>Released lotusrb 0.4.1</li>
+<li>Released lotus-controller 0.4.4</li>
+<li>Released lotus-view 0.4.3</li>
+<li>Released lotus-model 0.4.1</li>
+<li>Released lotus-utils 0.5.1</li>
+<li>Released lotus-validations 0.3.2</li>
+<li>Released lotus-router 0.4.2</li>
+<li>Released lotus-helpers 0.2.0</li>
+</ul>
+
+      <h2 id="completed" class="title"><a name="completed" class="anchor" href="#completed">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Completed</h2>
+    
+<ul>
+<li>[<a href="https://github.com/jodosha">Luca Guidi</a>] When add a middleware prepend it [<a href="https://github.com/lotus/lotus/pull/302">details</a>]</li>
+<li>[<a href="https://github.com/AlfonsoUceda">Alfonso Uceda</a>] Fixed model generator [<a href="https://github.com/lotus/lotus/pull/301">details</a>]</li>
+<li>[<a href="https://github.com/jodosha">Luca Guidi</a>] Ensure action generator works with (double) quoted or escaped name [<a href="https://github.com/lotus/lotus/pull/300">details</a>]</li>
+<li>[<a href="https://github.com/mvader">Miguel Molina</a>] Add a database check in the new app generator [<a href="https://github.com/lotus/lotus/pull/298">details</a>]</li>
+<li>[<a href="https://github.com/joneslee85">Trung Lê</a>] Add --db as the second alias for --database app generator arg [<a href="https://github.com/lotus/lotus/pull/289">details</a>]</li>
+<li>[<a href="https://github.com/AlfonsoUceda">Alfonso Uceda</a>] Fixed random csrf test fail [<a href="https://github.com/lotus/lotus/pull/280">details</a>]</li>
+<li>[<a href="https://github.com/theocodes">Theo Felippe</a>] PathPrefix relative_join bug [<a href="https://github.com/lotus/router/pull/64">details</a>]</li>
+<li>[<a href="https://github.com/AlfonsoUceda">Alfonso Uceda</a>] Fix load container in lotus console [<a href="https://github.com/lotus/lotus/pull/279">details</a>]</li>
+<li>[<a href="https://github.com/farrel">Farrel Lifson</a>] Search for partial template under view template directory [<a href="https://github.com/lotus/view/pull/73">details</a>]</li>
+<li>[<a href="https://github.com/nickcoyne">Nick Coyne</a>] Use createdb to create database [<a href="https://github.com/lotus/model/pull/200">details</a>]</li>
+<li>[<a href="https://github.com/khaiql">Scott Lê</a>] Add text<em>area helper to form</em>for [<a href="https://github.com/lotus/helpers/pull/21">details</a>]</li>
+<li>[<a href="https://github.com/vyper">Leonardo Saraiva</a>] Fixing lotus routes when architecture is application [<a href="https://github.com/lotus/lotus/pull/272">details</a>]</li>
+<li>[<a href="https://github.com/AlfonsoUceda">Alfonso Uceda</a>] [#267] fix secret when generate new app with app architecture option [<a href="https://github.com/lotus/lotus/pull/268">details</a>]</li>
+<li>[<a href="https://github.com/AlfonsoUceda">Alfonso Uceda</a>] Removed slice web env database url [<a href="https://github.com/lotus/lotus/pull/260">details</a>]</li>
+<li>[<a href="https://github.com/hieuk09">Hiếu Nguyễn</a>] Application Architecture [<a href="https://github.com/lotus/lotus/pull/259">details</a>]</li>
+<li>[<a href="https://github.com/jodosha">Luca Guidi</a>] Database migrations [<a href="https://github.com/lotus/lotus/pull/256">details</a>]</li>
+<li>[<a href="https://github.com/mjbellantoni">Matthew Bellantoni</a>] Fixes bug #113 where Params are incorrectly converted to hashes. [<a href="https://github.com/lotus/controller/pull/115">details</a>]</li>
+</ul>
+
+      <h2 id="development" class="title"><a name="development" class="anchor" href="#development">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Development</h2>
+    
+<ul>
+<li>[<a href="https://github.com/benlovell">Ben Lovell</a>] Some RSpec idioms [<a href="https://github.com/lotus/lotus/pull/294">details</a>]</li>
+<li>[<a href="https://github.com/joneslee85">Trung Lê</a>] Generate env.rake and load all tasks in lib/tasks [<a href="https://github.com/lotus/lotus/pull/290">details</a>]</li>
+<li>[<a href="https://github.com/sungwoncho">Sung Won Cho</a>] Add Destroy command [<a href="https://github.com/lotus/lotus/pull/194">details</a>]</li>
+<li>[<a href="https://github.com/smt116">Maciej Malecki</a>] Preload application in config/environment file. [<a href="https://github.com/lotus/lotus/pull/180">details</a>]</li>
+<li>[<a href="https://github.com/lotus">Lotus</a>] Implement command/query separation for Repository, by introducing #fetch [<a href="https://github.com/lotus/model/pull/207">details</a>]</li>
+<li>[<a href="https://github.com/AlfonsoUceda">Alfonso Uceda</a>] [WIP] support joins [<a href="https://github.com/lotus/model/pull/205">details</a>]</li>
+<li>[<a href="https://github.com/lotus">Lotus</a>] Implement SQL inner join [<a href="https://github.com/lotus/model/pull/102">details</a>]</li>
+<li>[<a href="https://github.com/heruku">Uku Taht</a>] Associations [<a href="https://github.com/lotus/model/pull/56">details</a>]</li>
+<li>[<a href="https://github.com/rodzyn">Marcin Olichwirowicz</a>] Custom validations [<a href="https://github.com/lotus/validations/pull/49">details</a>]</li>
+<li>[<a href="https://github.com/fuadsaud">Fuad Saud</a>] Add helper for word wrapping [<a href="https://github.com/lotus/helpers/pull/1">details</a>]</li>
+</ul>
+
+      <h2 id="roadmap" class="title"><a name="roadmap" class="anchor" href="#roadmap">      <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+      <path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path>
+      </svg>
+</a>Roadmap</h2>
+    
+<p><a href="http://bit.ly/lotusrb-roadmap">Trello board</a></p>
+]]></content>
+     </entry>
+</feed>
